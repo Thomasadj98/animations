@@ -1,11 +1,11 @@
 import {JSX} from 'react';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import {motion} from 'framer-motion';
+import {motion, MotionValue, useMotionValue} from 'framer-motion';
 
 interface MousePosition {
-  x: any;
-  y: any;
+  x: MotionValue<number>;
+  y: MotionValue<number>;
 }
 
 // Define the props type
@@ -15,7 +15,9 @@ interface GalleryProps {
 }
 
 export default function Gallery({mousePosition, handle}: GalleryProps): JSX.Element {
-  const {x, y} = mousePosition;
+  const defaultX = useMotionValue(0);
+  const defaultY = useMotionValue(0);
+  const {x = defaultX, y = defaultY} = mousePosition || {};
 
   return (
     <div className={styles.gallery}>

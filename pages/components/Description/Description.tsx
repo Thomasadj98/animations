@@ -1,6 +1,7 @@
+'use client';
 import {JSX, useState} from 'react';
 import styles from './style.module.scss';
-import {motion} from 'framer-motion';
+import {motion, MotionValue, useMotionValue} from 'framer-motion';
 import Image from 'next/image';
 
 interface Project {
@@ -10,21 +11,22 @@ interface Project {
 
 interface DescriptionProps {
   mousePosition: {
-    x: any;
-    y: any;
+    x: MotionValue<number>;
+    y: MotionValue<number>;
   };
   projects: Project[];
 }
 
 export default function Description({mousePosition, projects}: DescriptionProps): JSX.Element {
   const [index, setIndex] = useState<number>(0); // Initialize `index` as a number
-
-  const {x, y} = mousePosition;
+  const defaultX = useMotionValue(0);
+  const defaultY = useMotionValue(0);
+  const {x = defaultX, y = defaultY} = mousePosition || {};
 
   return (
     <div className={styles.description}>
       <div className={styles.descriptionContainer}>
-        {projects.map(({name}, i) => (
+        {projects && projects?.map(({name}, i) => (
           <p
             onMouseOver={() => setIndex(i)} // Update the index on hover
             key={`p${i}`}>
@@ -32,15 +34,16 @@ export default function Description({mousePosition, projects}: DescriptionProps)
           </p>
         ))}
       </div>
-      <motion.div
-        className={styles.vignette}
-        style={{x, y}}>
-        <Image
-          src={`/images/${projects[index].handle}/1.jpg`}
-          alt={`${projects[index].name} image`}
-          fill
-        />
-      </motion.div>
+      {projects && <motion.div
+          className={styles.vignette}
+          style={{x, y}}>
+          <Image
+              src={`/images/${projects[index].handle}/1.jpg`}
+              alt={`${projects[index].name} image`}
+              fill
+          />
+      </motion.div>}
+
     </div>
   );
 }
