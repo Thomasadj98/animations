@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import StickyCursor from "./components/StickyCursor/StickyCursor";
+import StickyCursor from "./components/shared/StickyCursor/StickyCursor";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
