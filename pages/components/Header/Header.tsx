@@ -1,4 +1,4 @@
-import {Ref} from 'react';
+import {forwardRef, Ref} from 'react';
 import styles from './style.module.scss';
 import Link from 'next/link';
 
@@ -6,7 +6,7 @@ interface HeaderProps {
   [key: string]: unknown;
 }
 
-export function Header(props: HeaderProps, ref: Ref<HTMLDivElement>) {
+const Header = forwardRef<HTMLDivElement, HeaderProps>(function Header(props, ref: Ref<HTMLDivElement>) {
   return (
     <header className={styles.header}>
       <h1>Thomasadj98</h1>
@@ -19,4 +19,6 @@ export function Header(props: HeaderProps, ref: Ref<HTMLDivElement>) {
       </div>
     </header>
   );
-}
+});
+
+export default Header;
