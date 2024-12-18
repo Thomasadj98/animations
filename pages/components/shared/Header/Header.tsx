@@ -13,6 +13,7 @@ const Header = forwardRef<HTMLDivElement, HeaderProps>(function Header(props, re
       <nav className={styles.nav}>
         <Link href="/">Home</Link>
         <Link href="/hero">Hero</Link>
+        <Link href="/parallax">Parallax</Link>
       </nav>
       <div className={styles.burger}>
         <div ref={ref} className={styles.bounds}></div>

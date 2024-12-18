@@ -20,3 +20,27 @@ h1 {
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax__description-container {
+    display: flex;
+    justify-content: center;
+    margin-block: 10rem;
+
+    p {
+        font-size: 8rem;
+        text-align: center;
+        max-width: 50vw;
+        text-transform: uppercase;
+    }
+}
+
+.parallax__empty-container {
+    height: 100vh;
+}
