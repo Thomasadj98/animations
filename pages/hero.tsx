@@ -1,9 +1,9 @@
 'use client';
-import {Gallery} from './components/Gallery/Gallery';
+import Gallery from './components/Gallery/Gallery';
 import {JSX, useEffect} from 'react';
 import Lenis from '@studio-freight/lenis';
 import {useSpring} from 'framer-motion';
-import {Description} from './components/Description/Description';
+import Description from './components/Description/Description';
 
 // Define a type for the project objects
 interface Project {
