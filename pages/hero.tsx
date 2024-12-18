@@ -1,9 +1,9 @@
 'use client';
-import Gallery from './components/Gallery/Gallery';
+import {Gallery} from './components/Gallery/Gallery';
 import {JSX, useEffect} from 'react';
 import Lenis from '@studio-freight/lenis';
 import {useSpring} from 'framer-motion';
-import Description from './components/Description/Description';
+import {Description} from './components/Description/Description';
 
 // Define a type for the project objects
 interface Project {
@@ -15,7 +15,6 @@ const projects: Project[] = [
   {name: "Dyal Thak", handle: "dyal_thak"},
   {name: "Leidinger Matthias", handle: "leidinger_matthias"},
   {name: "Mark Rammers", handle: "mark_rammers"},
-  // { name: "Landon Speers", handle: "landon_speers" }
 ];
 
 const spring = {

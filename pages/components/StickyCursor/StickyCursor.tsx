@@ -2,8 +2,7 @@ import {JSX, useEffect} from 'react';
 import styles from './style.module.scss';
 import {motion, useMotionValue, useSpring} from 'framer-motion';
 
-export default function StickyCursor(): JSX.Element {
-
+export function StickyCursor(): JSX.Element {
   const cursorSize = 15;
   const mouse = {
     x: useMotionValue(0),

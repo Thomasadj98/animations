@@ -14,7 +14,7 @@ interface GalleryProps {
   handle: string;
 }
 
-export default function Gallery({mousePosition, handle}: GalleryProps): JSX.Element {
+export function Gallery({mousePosition, handle}: GalleryProps): JSX.Element {
   const defaultX = useMotionValue(0);
   const defaultY = useMotionValue(0);
   const {x = defaultX, y = defaultY} = mousePosition || {};

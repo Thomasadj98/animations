@@ -17,7 +17,7 @@ interface DescriptionProps {
   projects: Project[];
 }
 
-export default function Description({mousePosition, projects}: DescriptionProps): JSX.Element {
+export function Description({mousePosition, projects}: DescriptionProps): JSX.Element {
   const [index, setIndex] = useState<number>(0); // Initialize `index` as a number
   const defaultX = useMotionValue(0);
   const defaultY = useMotionValue(0);
@@ -43,7 +43,6 @@ export default function Description({mousePosition, projects}: DescriptionProps)
               fill
           />
       </motion.div>}
-
     </div>
   );
 }
