@@ -1,11 +1,7 @@
-.nav {
-  gap: 10px;
-  display: flex;
-}
-
 .header {
   position: sticky;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -15,10 +11,29 @@
   mix-blend-mode: difference;
   z-index: 1;
 
+  .nav {
+    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: black;
+      text-decoration: none;
+      mix-blend-mode: difference;
+      cursor: pointer;
+
+      &:hover {
+        scale: 1.1;
+        text-decoration: underline;
+      }
+    }
+  }
+
   .burger {
     position: relative;
     display: flex;
-    gap: 8px;
+    align-items: end;
+    gap: 0.5rem;
     flex-direction: column;
     padding: 30px;
     pointer-events: none;
