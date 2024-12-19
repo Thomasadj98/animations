@@ -1,63 +1,54 @@
 .header {
-  position: sticky;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
+  width: 100%;
+  padding: 50px;
   cursor: pointer;
-  mix-blend-mode: difference;
-  z-index: 1;
 
-  .nav {
-    gap: 1.5rem;
-    display: flex;
-    justify-content: center;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    a {
-      color: black;
-      text-decoration: none;
-      mix-blend-mode: difference;
-      cursor: pointer;
+  .navMenuContainer {
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    z-index: 10;
 
-      &:hover {
-        scale: 1.1;
+    .navMenu {
+      position: relative;
+      overflow: hidden;
+      width: 480px;
+      height: 650px;
+      background-color: #c9fd74;
+      border-radius: 24px;
+    }
+  }
+
+  .navLinksContainer {
+    height: 100%;
+    padding: 100px 40px 50px 40px;
+    box-sizing: border-box;
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .childLinkContainer {
+        perspective: 120px;
+        perspective-origin: bottom;
+      }
+
+      a {
+        font-size: 3rem;
+      }
+
+      .active {
         text-decoration: underline;
       }
-    }
-  }
-
-  .burger {
-    position: relative;
-    display: flex;
-    align-items: end;
-    gap: 0.5rem;
-    flex-direction: column;
-    padding: 30px;
-    pointer-events: none;
-
-    &::before, &::after {
-      display: block;
-      content: "";
-      width: 30px;
-      height: 2px;
-      mix-blend-mode: difference;
-      background-color: black;
-    }
-  }
-
-  .bounds {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: all;
-
-    &:hover {
-      transform: scale(3);
     }
   }
 }
