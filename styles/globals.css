@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    min-height: 100vh;
+    min-height: 300vh;
 }
 
 h1 {
@@ -43,4 +43,38 @@ h1 {
 
 .parallax__empty-container {
     height: 100vh;
+}
+
+.homeBanner {
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    background: url('../public/images/banner.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+.homeContent {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        position: absolute;
+        color: white;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    .svgAnimationContainer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+
+    .treeSvg {
+        transition: transform 0.2s ease-in-out;
+    }
 }

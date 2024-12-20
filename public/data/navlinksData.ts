@@ -1,4 +1,6 @@
-export const Links: {title: string, href: string}[] = [
+import { type Link } from '../types/types'
+
+export const Links: Link[] = [
   {
     title: 'Home',
     href: '/',
@@ -12,3 +14,5 @@ export const Links: {title: string, href: string}[] = [
     href: '/parallax',
   },
 ]
+
+
