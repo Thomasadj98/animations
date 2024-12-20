@@ -11,14 +11,12 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href='/'>
-        <h1>Thomasadj98</h1>
+        <h1>github:@Thomasadj98</h1>
       </Link>
       <NavMenu/>
     </header>
   );
 }
-
-
 
 const menuAnimation = {
   open: {
@@ -63,9 +61,9 @@ function NavMenu() {
 const linksAnimation = {
   initial: {
     opacity: 0,
-    rotateX: 90,
-    translateY: 80,
-    translateX: -20,
+    rotateX: -90,
+    translateY: -40,
+    translateX: 40,
   },
   enter: (index: number) => ({
     opacity: 1,
@@ -74,8 +72,8 @@ const linksAnimation = {
     translateX: 0,
     transition: {
       duration: 0.65,
-      opacity: {duration: 0.35},
-      delay: 0.4 + (index * 0.1),
+      opacity: {duration: 0.45},
+      delay: 0.4 + (index * 0.05),
       ease: [.215, .61, .355, 1]
     }
   }),
