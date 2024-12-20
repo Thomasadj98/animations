@@ -1,0 +1,49 @@
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.body {
+  width: 58vw;
+  color: white;
+}
+
+.introLine {
+  display: flex;
+  font-size: 7vw;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.introLine p {
+  margin: 0px;
+}
+
+//.introLine:nth-of-type(3) {
+//  justify-content: center;
+//}
+
+.introLine:nth-of-type(3), .introLine:nth-of-type(4) {
+  display: inline-flex;
+}
+
+.introLine:nth-of-type(4) {
+  right: -40px;
+  position: relative;
+}
+
+.introLine p {
+  margin: 0px;
+}
+
+.background {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+}
