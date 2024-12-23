@@ -1,0 +1,83 @@
+.gallery {
+  height: 175vh;
+  overflow: hidden;
+  background: rgb(45, 45, 45);
+
+  .galleryWrapper {
+    position: relative;
+    top: -12.5vh;
+    height: 200vh;
+    width: 115vw;
+    display: flex;
+    gap: 2vw;
+    padding: 2vw;
+
+    .column {
+      position: relative;
+      height: 100%;
+      width: 40%;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      white-space: nowrap;
+
+      &:nth-of-type(1){
+        top: -40%;
+      }
+
+      &:nth-of-type(2){
+        top: -70%;
+      }
+
+      &:nth-of-type(3){
+        top: -30%;
+      }
+
+      .imageContainer {
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        position: relative;
+        border-radius: 1vw;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.spacer {
+  height: 100vh;
+}
+
+.blogDescription {
+  display: flex;
+  align-items: end;
+  height: 450px;
+  background-color: #c9fd74;
+  border-radius: 24px;
+  padding: 24px;
+
+  .blogDescriptionInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .blogTypePillContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .blogTypePill {
+      padding: 12px 24px;
+      background-color: blue;
+      border-radius: 20px;
+      color: white;
+    }
+  }
+}
