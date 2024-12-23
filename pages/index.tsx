@@ -2,6 +2,7 @@ import {motion, useScroll, useTransform } from "framer-motion";
 import localFont from "next/font/local";
 import Image from "next/image";
 import PersonalIntroSection from "./components/shared/PersonalIntroSection/PersonalIntroSection";
+import BlogPromoSection from "./components/shared/Blog/BlogPromoSection/BlogPromoSection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +36,8 @@ export default function Home() {
 
           <p>Amsterdam, NL</p>
         </div>
+
+        <BlogPromoSection />
 
         <PersonalIntroSection />
       </main>
